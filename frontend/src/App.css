@@ -2,38 +2,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500&display=swap');
 
 :root {
-  /* --- PALETA DE COLORES ELEGANCE --- */
-  --color-primary: #4A5D4F;    /* Verde Salvia Profundo */
-  --color-accent: #C08B8B;     /* Rosa Antiguo (Dusty Rose) */
-  --color-bg: #F9F8F6;         /* Blanco Crema (Papel) */
-  --color-card-bg: #FFFFFF;    /* Blanco Puro */
-  --color-text-main: #2C3333;  /* Gris Carbón Oscuro */
-  --color-text-light: #6E7575; /* Gris Piedra */
+ 
+  --color-primary: #4A5D4F;    
+  --color-accent: #C08B8B;    
+  --color-bg: #F9F8F6;        
+  --color-card-bg: #FFFFFF;   
+  --color-text-main: #2C3333; 
+  --color-text-light: #6E7575; 
   
   --shadow-soft: 0 10px 40px -10px rgba(0,0,0,0.08);
-  --radius-elegant: 4px;       /* Bordes sutilmente redondeados, no redondos */
+  --radius-elegant: 4px;       
 }
 
 body {
   background-color: var(--color-bg);
   font-family: 'Montserrat', sans-serif;
   color: var(--color-text-main);
-  line-height: 1.7; /* Más espacio entre líneas para elegancia */
+  line-height: 1.7; 
 }
 
 h1, h2, h3, h4, h5, .navbar-brand {
-  font-family: 'Cinzel', serif; /* Fuente clásica y lujosa */
+  font-family: 'Cinzel', serif;
   letter-spacing: 1px;
 }
 
-/* --- NAVBAR DE LUJO (ALTA VISIBILIDAD) --- */
+
 .navbar {
-  background-color: #ffffff !important; /* Blanco puro para máximo contraste */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Sombra un poco más marcada para separar del fondo */
+  background-color: #ffffff !important; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
   padding-top: 0.8rem;
   padding-bottom: 0.8rem;
   
-  /* Mantenerlo siempre visible y encima de todo */
+  
   position: relative; 
   z-index: 1050;
 }
@@ -41,36 +41,36 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .navbar-brand {
   color: var(--color-primary) !important;
   font-family: 'Cinzel', serif;
-  font-weight: 800; /* Mucho más grueso */
-  font-size: 1.7rem; /* Un poco más grande */
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.1); /* Sombra sutil al texto para definición */
+  font-weight: 800; 
+  font-size: 1.7rem; 
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.1); 
 }
 
 .nav-link {
-  color: #1a1a1a !important; /* Casi negro, mucho más legible que el gris */
+  color: #1a1a1a !important; 
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700 !important; /* Negrita fuerte */
+  font-weight: 700 !important; 
   font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 1.5px; /* Separación para leer mejor */
-  padding: 8px 16px !important; /* Más espacio "clicable" */
+  letter-spacing: 1.5px; 
+  padding: 8px 16px !important;
   transition: all 0.3s ease;
-  border-radius: 4px; /* Bordes suaves para el efecto hover */
+  border-radius: 4px; 
 }
 
-/* Efecto al pasar el mouse (Hover) */
+
 .nav-link:hover, .nav-link.active {
-  color: #ffffff !important; /* Texto blanco */
-  background-color: var(--color-primary); /* Fondo verde elegante */
-  transform: translateY(-2px); /* Pequeño salto visual */
-  box-shadow: 0 4px 8px rgba(74, 93, 79, 0.3); /* Sombra verde suave */
+  color: #ffffff !important; 
+  background-color: var(--color-primary); 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(74, 93, 79, 0.3); 
 }
 
 /* --- BOTONES BOUTIQUE --- */
 .btn-primary {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
-  border-radius: 0; /* Botones cuadrados son más elegantes */
+  border-radius: 0;
   padding: 10px 25px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
   color: white;
 }
 
-/* --- TARJETAS DE PRODUCTOS (Minimalistas) --- */
+/* --- TARJETAS DE PRODUCTOS  --- */
 .card-producto {
   background-color: var(--color-card-bg);
   border: none;
@@ -112,9 +112,9 @@ h1, h2, h3, h4, h5, .navbar-brand {
 }
 
 .card-img-top {
-  height: 320px !important; /* Imágenes más altas y esbeltas */
+  height: 320px !important; 
   object-fit: cover;
-  transition: transform 0.8s ease; /* Zoom muy lento */
+  transition: transform 0.8s ease; 
 }
 
 .card-producto:hover .card-img-top {

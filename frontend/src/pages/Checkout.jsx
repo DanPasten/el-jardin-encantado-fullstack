@@ -30,7 +30,7 @@ const Checkout = ({ carrito, vaciarCarrito, total }) => {
     };
 
     try {
-      // --- CONEXIÓN AL BACKEND (POST) ---
+      // --- CONEXIÓN AL BACKEND  ---
       const respuesta = await fetch('http://localhost:3000/api/pedidos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

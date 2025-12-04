@@ -5,7 +5,7 @@ const Inicio = () => {
   return (
     <div className="fade-in">
       
-      {/* 1. HERO SECTION CINEMATOGRÁFICO */}
+      {/* 1 */}
       <header className="position-relative w-100 vh-100 d-flex align-items-center justify-content-center overflow-hidden" style={{marginTop: '-80px'}}>
         {/* Imagen de fondo oscurecida */}
         <div style={{
@@ -14,7 +14,7 @@ const Inicio = () => {
           backgroundImage: 'url("https://previews.123rf.com/images/photoroman/photoroman1705/photoroman170500038/78607334-colorful-tulips-in-spring-keukenhof-netherlands-europe-blooming-tulip-keukenhof-garden.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'brightness(0.6)', // Oscurece la imagen para que el texto resalte
+          filter: 'brightness(0.6)', 
           zIndex: -1
         }}></div>
 
@@ -28,7 +28,7 @@ const Inicio = () => {
         </div>
       </header>
 
-      {/* 2. SECCIÓN "NUESTRA ESENCIA" */}
+      {/* 2 */}
       <section className="container my-5 py-5">
         <div className="row text-center mb-5">
           <div className="col-lg-8 mx-auto">
@@ -62,7 +62,7 @@ const Inicio = () => {
         </div>
       </section>
 
-      {/* 3. BANNER PROMOCIONAL INTERMEDIO */}
+      {/* 3 */}
       <section className="py-5 bg-light">
         <div className="container py-5">
           <div className="row align-items-center">

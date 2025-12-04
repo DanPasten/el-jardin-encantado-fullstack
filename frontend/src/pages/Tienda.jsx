@@ -20,7 +20,7 @@ const Tienda = ({ agregarAlCarrito, productos }) => {
   return (
     <div className="fade-in"> {/* Animación de entrada */}
       
-      {/* 1. HERO BANNER DE LA TIENDA */}
+      {/* 1 */}
       <header className="store-header text-center">
         <div>
           <h1 className="display-4 fw-bold">Nuestra Colección</h1>
@@ -30,7 +30,7 @@ const Tienda = ({ agregarAlCarrito, productos }) => {
 
       <div className="container" style={{ marginTop: '-50px' }}> {/* Sube un poco para solaparse con el banner */}
         
-        {/* 2. BARRA DE FILTROS FLOTANTE */}
+        {/* 2 */}
         <div className="card filter-card mb-5">
           <div className="row g-3 align-items-center">
             
@@ -74,7 +74,7 @@ const Tienda = ({ agregarAlCarrito, productos }) => {
           </div>
         </div>
 
-        {/* 3. GRILLA DE PRODUCTOS */}
+        {/* 3 */}
         <div className="row">
           {productosFiltrados.length > 0 ? (
             productosFiltrados.map((producto) => (

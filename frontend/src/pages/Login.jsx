@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Hook para redirigir
+import { useNavigate } from 'react-router-dom'; 
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -9,11 +9,11 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simulación de credenciales (Igual que en tu versión anterior)
+   
     if (email === 'admin@admin.cl' && password === 'admin123') {
       localStorage.setItem('userRole', 'admin');
       alert('¡Bienvenido Administrador!');
-      navigate('/admin'); // Redirige al panel
+      navigate('/admin'); 
     } else {
       alert('Credenciales incorrectas (Prueba: admin@admin.cl / admin123)');
     }

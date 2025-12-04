@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import WeatherWidget from './WeatherWidget'; // Importamos el componente del clima
-import './Navigation.css'; // Importamos los estilos de alto contraste
+import WeatherWidget from './WeatherWidget'; 
+import './Navigation.css'; 
 
 const Navigation = ({ cantidadCarrito }) => {
   return (
-    // 'sticky-top' hace que el menú se quede fijo arriba al bajar
+    
     <nav className="navbar navbar-expand-lg navbar-light sticky-top bg-white">
       <div className="container">
         
@@ -43,7 +43,7 @@ const Navigation = ({ cantidadCarrito }) => {
               <Link className="nav-link" to="/login">Admin</Link>
             </li>
 
-            {/* --- WIDGET DEL CLIMA (Se oculta en celulares muy pequeños para ahorrar espacio) --- */}
+            {/* --- WIDGET DEL CLIMA --- */}
             <li className="nav-item d-none d-lg-block mx-2">
                <WeatherWidget />
             </li>

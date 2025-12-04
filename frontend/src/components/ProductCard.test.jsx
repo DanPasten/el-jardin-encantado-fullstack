@@ -4,7 +4,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import ProductCard from './ProductCard';
 
 // --- CAMBIO CLAVE AQUÍ ---
-// 1. Importamos los "matchers" (comparadores) específicamente
+// 1. Importamos los "matchers" específicamente
 import * as matchers from '@testing-library/jest-dom/matchers';
 
 // 2. Conectamos manualmente esos matchers a Vitest

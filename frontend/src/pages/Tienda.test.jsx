@@ -9,7 +9,7 @@ vitestExpect.extend(matchers);
 
 import Tienda from './Tienda';
 
-// Datos de prueba (Mocks)
+// Datos de prueba 
 const productosMock = [
     { id: "1", nombre: "Ramo de Rosas", precio: 40000, imagen: "img1.jpg" },
     { id: "2", nombre: "Girasoles", precio: 20000, imagen: "img2.jpg" },
@@ -23,7 +23,6 @@ describe('Página Tienda (Lógica de Filtrado)', () => {
 
     it('Debe renderizar la lista completa de productos al inicio', () => {
         render(<Tienda productos={productosMock} agregarAlCarrito={agregarMock} />);
-        // Deben aparecer los 3 nombres
         expect(screen.getByText('Ramo de Rosas')).toBeInTheDocument();
         expect(screen.getByText('Girasoles')).toBeInTheDocument();
         expect(screen.getByText('Tulipanes')).toBeInTheDocument();

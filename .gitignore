@@ -10,4 +10,4 @@ build/
 # Ignorar variables de entorno y llaves (SEGURIDAD)
 .env
 serviceAccountKey.json
-.DS_Store
+.DS_Storegit commit -m "Estructura Final: Frontend y Backend separados"

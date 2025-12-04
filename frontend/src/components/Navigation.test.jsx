@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen, cleanup } from '@testing-library/react';
 import { describe, it, expect, afterEach } from 'vitest';
-import { BrowserRouter } from 'react-router-dom'; // Necesario porque Navigation usa <Link>
+import { BrowserRouter } from 'react-router-dom'; 
 import '@testing-library/jest-dom/matchers';
 import * as matchers from '@testing-library/jest-dom/matchers';
 import { expect as vitestExpect } from 'vitest';
@@ -15,7 +15,7 @@ describe('Componente Navigation', () => {
     afterEach(cleanup);
 
     it('Debe mostrar el nombre de la tienda (Logo)', () => {
-        // Envolvemos en BrowserRouter porque el componente tiene Links
+       
         render(
             <BrowserRouter>
                 <Navigation cantidadCarrito={0} />
@@ -34,7 +34,7 @@ describe('Componente Navigation', () => {
     });
 
     it('Debe actualizar el contador cuando aumentan los productos', () => {
-        // Simulamos que hay 5 productos
+   
         render(
             <BrowserRouter>
                 <Navigation cantidadCarrito={5} />
@@ -51,7 +51,7 @@ describe('Componente Navigation', () => {
         );
         const linkAdmin = screen.getByRole('link', { name: /Admin/i });
         expect(linkAdmin).toBeInTheDocument();
-        // Verificamos que apunte a /login
+
         expect(linkAdmin).toHaveAttribute('href', '/login');
     });
 });

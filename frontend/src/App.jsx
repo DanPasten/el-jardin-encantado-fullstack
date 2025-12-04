@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import './App.css';
 
 function App() {
-  // --- ESTADO 1: CARRITO (Este sí lo mantenemos local por comodidad del usuario) ---
+  // --- ESTADO 1: CARRITO---
   const [carrito, setCarrito] = useState(() => {
     const guardado = localStorage.getItem('carrito');
     return guardado ? JSON.parse(guardado) : [];
@@ -24,10 +24,10 @@ function App() {
     localStorage.setItem('carrito', JSON.stringify(carrito));
   }, [carrito]);
 
-  // --- ESTADO 2: PRODUCTOS (CONECTADO AL BACKEND) ---
+  // --- ESTADO 2: PRODUCTOS ---
   const [misProductos, setMisProductos] = useState([]);
 
-  // 1. CARGAR PRODUCTOS DESDE EL SERVIDOR (GET)
+  // 1. CARGAR PRODUCTOS DESDE EL SERVIDOR 
   useEffect(() => {
     obtenerProductos();
   }, []);
@@ -36,7 +36,7 @@ function App() {
     try {
       const respuesta = await fetch('http://localhost:3000/api/productos');
       const datos = await respuesta.json();
-      setMisProductos(datos); // Guardamos lo que nos dio el servidor
+      setMisProductos(datos); 
     } catch (error) {
       console.error("Error al cargar productos:", error);
     }
@@ -55,9 +55,9 @@ function App() {
   const total = carrito.reduce((acc, item) => acc + item.precio, 0);
 
 
-  // --- FUNCIONES DE PRODUCTOS (CONECTADAS AL BACKEND) ---
+  // --- FUNCIONES DE PRODUCTOS ---
 
-  // 2. AGREGAR PRODUCTO AL SERVIDOR (POST)
+  // 2. AGREGAR PRODUCTO AL SERVIDOR 
   const agregarProducto = async (nuevoProducto) => {
     try {
       const respuesta = await fetch('http://localhost:3000/api/productos', {
@@ -67,7 +67,7 @@ function App() {
       });
       
       if (respuesta.ok) {
-        // Si se guardó bien, recargamos la lista desde el servidor
+        
         obtenerProductos(); 
       }
     } catch (error) {
@@ -75,13 +75,13 @@ function App() {
     }
   };
 
-  // 3. ELIMINAR PRODUCTO DEL SERVIDOR (DELETE)
+  // 3. ELIMINAR PRODUCTO DEL SERVIDOR 
   const eliminarProducto = async (id) => {
     try {
       await fetch(`http://localhost:3000/api/productos/${id}`, {
         method: 'DELETE'
       });
-      // Actualizamos la lista visualmente quitando el eliminado
+     
       setMisProductos(misProductos.filter(p => p.id !== id));
     } catch (error) {
       alert("Error al eliminar del servidor");

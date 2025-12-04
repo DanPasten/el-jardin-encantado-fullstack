@@ -5,7 +5,7 @@ const WeatherWidget = () => {
   const [error, setError] = useState(null);
   const [cargando, setCargando] = useState(true);
 
-  // API KEY DE PRUEBA (Si esta falla, regístrate en openweathermap.org para obtener una propia)
+  // API KEY DE PRUEBA 
   const API_KEY = 'e932c96c565a4e51130767072557650f'; 
 
   useEffect(() => {
@@ -52,7 +52,7 @@ const WeatherWidget = () => {
 
   // --- RENDERIZADO SEGURO ---
 
-  // 1. Si hay error, mostramos un texto pequeño o nada (para no romper la estética)
+  // 1. Si hay error, mostramos un texto pequeño o nada
   if (error) {
     return (
         <div className="d-flex align-items-center ms-3 px-2 py-1 bg-light rounded-pill border" title="No se pudo cargar el clima">
@@ -67,8 +67,7 @@ const WeatherWidget = () => {
     return <span className="text-muted small ms-3" style={{fontSize: '0.8rem'}}>...</span>;
   }
 
-  // 3. Si tenemos datos, los mostramos CON SEGURIDAD (usando ?.)
-  // El ?. evita que la pantalla se ponga blanca si falta algún dato
+
   return (
     <div className="d-flex align-items-center ms-3 px-3 py-1 bg-light rounded-pill border" style={{fontSize: '0.85rem'}}>
       {clima?.weather?.[0]?.icon && (
