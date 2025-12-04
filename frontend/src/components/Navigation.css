@@ -1,0 +1,45 @@
+/* src/components/Navigation.css */
+
+/* Forzamos el color de fondo y la sombra */
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  position: relative;
+  z-index: 9999;
+}
+
+/* Marca (Logo) en verde oscuro y GRUESA */
+.navbar-brand {
+  color: #1a4d2e !important; /* Verde muy oscuro */
+  font-family: 'Cinzel', serif;
+  font-weight: 900 !important; /* Extra negrita */
+  font-size: 1.8rem !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Enlaces del menú: Negros y Gruesos */
+.nav-link {
+  color: #000000 !important; /* Negro puro */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800 !important; /* Extra negrita */
+  font-size: 1rem !important;
+  text-transform: uppercase;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+/* Cuando pasas el mouse: Fondo verde y letra blanca */
+.nav-link:hover, .nav-link.active {
+  background-color: #2E8B57 !important; /* Verde Jardín */
+  color: #ffffff !important;
+  transform: scale(1.05); /* Crece un poquito */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* El botón del carrito para que destaque */
+.btn-outline-primary {
+  border-width: 2px !important;
+  font-weight: bold !important;
+}
