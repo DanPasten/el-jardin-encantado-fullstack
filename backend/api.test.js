@@ -1,10 +1,10 @@
 const request = require('supertest');
 const express = require('express');
 const cors = require('cors');
-// Importamos solo las rutas, no el servidor completo para no abrir puertos reales
+// Importamos solo las rutas,
 const productosRoutes = require('./routes/productos');
 
-// Configuramos una app de Express "falsa" para la prueba
+// Configuramos una app de Express para la prueba
 const app = express();
 app.use(cors());
 app.use(express.json());

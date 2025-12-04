@@ -1,10 +1,10 @@
 // server/routes/productos.js
 const { Router } = require('express');
-const { db } = require('../firebase'); // Importamos la conexión que acabamos de crear
+const { db } = require('../firebase'); 
 
 const router = Router();
 
-// 1. OBTENER todos los productos (GET /api/productos)
+// 1. OBTENER todos los productos
 router.get('/', async (req, res) => {
     try {
         const snapshot = await db.collection('productos').get();
@@ -18,10 +18,10 @@ router.get('/', async (req, res) => {
     }
 });
 
-// 2. CREAR un producto nuevo (POST /api/productos)
+// 2. CREAR un producto nuevo 
 router.post('/', async (req, res) => {
     try {
-        // req.body contiene los datos que envía el Frontend (nombre, precio, etc.)
+        // req.body contiene los datos que envía el Frontend 
         const nuevoProducto = {
             nombre: req.body.nombre,
             precio: Number(req.body.precio),
@@ -30,7 +30,7 @@ router.post('/', async (req, res) => {
             descripcion: req.body.descripcion || "Descripción pendiente."
         };
 
-        // Guardamos en Firebase (add genera un ID automático)
+        // Guardamos en Firebase 
         const docRef = await db.collection('productos').add(nuevoProducto);
         
         // Respondemos con el ID creado y los datos
@@ -40,7 +40,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// 3. ELIMINAR un producto (DELETE /api/productos/:id)
+// 3. ELIMINAR un producto
 router.delete('/:id', async (req, res) => {
     try {
         const { id } = req.params;

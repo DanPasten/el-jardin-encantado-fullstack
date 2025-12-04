@@ -4,7 +4,7 @@ const { db } = require('../firebase');
 
 const router = Router();
 
-// 1. OBTENER todos los pedidos (GET)
+// 1. OBTENER todos los pedidos
 router.get('/', async (req, res) => {
     try {
         const snapshot = await db.collection('pedidos').orderBy('fecha', 'desc').get();
@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// 2. CREAR un nuevo pedido (POST)
+// 2. CREAR un nuevo pedido 
 router.post('/', async (req, res) => {
     try {
         const nuevoPedido = {
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// 3. ELIMINAR/COMPLETAR pedido (DELETE)
+// 3. ELIMINAR/COMPLETAR pedido 
 router.delete('/:id', async (req, res) => {
     try {
         await db.collection('pedidos').doc(req.params.id).delete();

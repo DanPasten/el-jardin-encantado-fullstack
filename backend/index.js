@@ -4,7 +4,7 @@ const cors = require('cors');
 
 // Importamos las rutas
 const productosRoutes = require('./routes/productos');
-const pedidosRoutes = require('./routes/pedidos'); // <--- NUEVA LÍNEA
+const pedidosRoutes = require('./routes/pedidos'); 
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 // Conectamos las rutas
 app.use('/api/productos', productosRoutes);
-app.use('/api/pedidos', pedidosRoutes); // <--- NUEVA LÍNEA
+app.use('/api/pedidos', pedidosRoutes); 
 
 app.listen(PORT, () => {
     console.log(`🚀 Servidor API corriendo en http://localhost:${PORT}`);
